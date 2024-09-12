@@ -1,0 +1,21 @@
+type Product {
+    id: UUID!
+    key: UUID!
+    is_active: Boolean
+    slug: String
+    value: String!
+    created_at: String
+    updated_at: String
+    price: Price @morphOne
+    unit: Unit @morphOne
+    image: [Image] @morphMany
+    video: [Video] @morphMany
+    metaTitle: MetaTitle @morphOne
+    metaDescription: MetaDescription @morphOne
+    tag: [Tag] @morphTo
+    parentable: Parentable @morphTo
+}
+
+extend type Query {
+    product(slug: String! @eq, key: UUID! @eq): Product @find
+}

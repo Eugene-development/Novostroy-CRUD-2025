@@ -1,0 +1,28 @@
+#import catalog.graphql
+#import rubric.graphql
+#import category.graphql
+#import product.graphql
+#import image.graphql
+#import video.graphql
+#import price.graphql
+#import unit.graphql
+#import text.graphql
+#import metatitle.graphql
+#import metadescription.graphql
+#import tag.graphql
+
+scalar UUID
+
+union Parentable =     
+    Catalog
+    | Rubric
+    | Category
+    | Product
+    | Image
+    | Video
+    | Price
+    | Unit
+    | Text
+    | MetaTitle
+    | MetaDescription
+    | Tag
