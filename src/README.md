@@ -55,3 +55,20 @@ composer require mll-lab/laravel-graphiql
 appServiceProvider
 
 php artisan serve
+
+--------
+Склонировать репозиторий
+
+Прописать два .env 
+
+
+sudo docker run --rm -v $(pwd):/app composer install --ignore-platform-reqs
+
+sudo chown -R $USER:www-data storage
+sudo chown -R $USER:www-data bootstrap/cache
+
+sudo chmod -R 777 storage
+sudo chmod -R 777 bootstrap/cache
+
+cd ..
+sudo docker-compose up --build -d

@@ -28,5 +28,10 @@ class Catalog extends RootModel
     {
         return $this->morphOne(Text::class, 'parentable');
     }
+    
+    public function image(): MorphMany
+    {
+        return $this->morphMany(Image::class, 'parentable');
+    }
  
 }
