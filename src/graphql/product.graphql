@@ -8,7 +8,7 @@ type Product {
     updated_at: String
     price: Price @morphOne
     unit: Unit @morphOne
-    image: [Image] @morphMany
+    image: [Image] @field(resolver: "App\\GraphQL\\Resolvers\\ProductResolver@resolveImages")
     video: [Video] @morphMany
     metaTitle: MetaTitle @morphOne
     metaDescription: MetaDescription @morphOne

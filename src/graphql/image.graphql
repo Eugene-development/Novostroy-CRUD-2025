@@ -4,5 +4,6 @@ type Image {
     active: Boolean
     hash: String
     alt: String
+    created_at: String
     parentable: Parentable! @morphTo
 }
