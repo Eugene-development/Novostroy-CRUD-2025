@@ -6,7 +6,6 @@ namespace App\GraphQL\Resolvers;
 
 use Nuwave\Lighthouse\Support\Contracts\GraphQLContext;
 use GraphQL\Type\Definition\ResolveInfo;
-// use Illuminate\Database\Eloquent\Builder;
 
 class RubricResolver
 {
