@@ -9,6 +9,8 @@ type Catalog {
     rubric: [Rubric] @morphMany
     text: Text @morphMany
     image: [Image] @morphMany
+    metaTitle: MetaTitle @morphOne
+    metaDescription: MetaDescription @morphOne
 }
 
 extend type Query {

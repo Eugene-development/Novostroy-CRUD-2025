@@ -10,10 +10,10 @@ type Product {
     unit: Unit @morphOne
     image: [Image] @field(resolver: "App\\GraphQL\\Resolvers\\ProductResolver@resolveImages")
     video: [Video] @morphMany
-    metaTitle: MetaTitle @morphOne
-    metaDescription: MetaDescription @morphOne
     tag: [Tag] @morphTo
     parentable: Parentable @morphTo
+    metaTitle: MetaTitle @morphOne
+    metaDescription: MetaDescription @morphOne
 }
 
 extend type Query {
